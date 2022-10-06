@@ -34,8 +34,8 @@ const MoviesPage = () => {
         } 
     }, [searchQuery, page]);
 
-    const onSearch = ({ search }) => {
-        setSearchParams({ searchQuery: search });
+    const onSearch = value => {
+        setSearchParams({ searchQuery: value });
         setPage(1);
         setMovies([]);
     }
