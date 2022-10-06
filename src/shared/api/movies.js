@@ -21,7 +21,7 @@ export async function fetchMovies(query, page) {
     const { data } = await axios.get(
       `${SEARCH_URL}?api_key=${API_KEY}&query=${query}&page=${page}&language=en-US&include_adult=false`
     );
-        return data;
+        return data.results;
   } catch (error) {
     console.log(error);
   }

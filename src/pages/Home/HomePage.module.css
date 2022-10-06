@@ -1,0 +1,11 @@
+.title {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.movieList {
+    margin-left: 20px;
+    font-weight: 600;
+}
+.movie:not(:last-child) {
+    margin-bottom: 8px;
+}
