@@ -21,8 +21,7 @@ const MoviesPage = () => {
             try {
                 setIsLoading(true);
                 const data = await fetchMovies(searchQuery, page);
-                setMovies(movies => [...movies, ...data]);               
-                console.log(data);
+                setMovies(movies => [...movies, ...data]);   
             } catch (error) {
                 setError(error);
             } finally {
@@ -67,7 +66,6 @@ const MoviesPage = () => {
             {error && Notify.failure('Please try again later!')}
             {isMovies && SearchResults()}
         </main>
-     
     )
 }
 

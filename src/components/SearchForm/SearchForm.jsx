@@ -9,7 +9,6 @@ function SearchForm({onSubmit}) {
     const handleChange = event => {
         const { value } = event.currentTarget;
         setQuery(value);
-        console.log(value);
     }
     
     const handleSubmit = event => {
