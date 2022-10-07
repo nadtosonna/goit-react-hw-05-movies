@@ -33,13 +33,17 @@ const MovieDetails = () => {
               <h2 className={css.overviewTitle}>Overview:</h2>
               <p className={css.overview}>{movie.overview}</p>
               <h2 className={css.genresTitle}>Genres:</h2>
-              <p>
-                {movie.genres.map(genres => (
-                  <span className={css.genres} key={genres.name}>{genres.name}</span>
-                ))}
-              </p>
+              <p>{movie.genres.map(genres => (
+                <span className={css.genres} key={genres.name}>{genres.name}</span>))}
+                </p>
+                <div className={css.additional}> Additional information
+                    <ul>
+                        <li>Cast</li>
+                        <li>Reviews</li>
+                    </ul>
+                </div>
             </div>
-          </div>
+            </div>
         </div>
       )}
         </main>

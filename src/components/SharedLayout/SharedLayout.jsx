@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { Outlet, NavLink } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { BsCameraReels } from "react-icons/bs";
 import css from "./SharedLayout.module.css";
 import { Link } from "./SharedLayout.styled";
