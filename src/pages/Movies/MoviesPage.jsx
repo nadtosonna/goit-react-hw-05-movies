@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { fetchMovies } from "shared/api/movies";
-import { useLocation, useSearchParams } from "react-router-dom";
+import { useLocation, useSearchParams, Link } from "react-router-dom";
 import { Loader } from "shared/Loader/Loader";
 import SearchForm from "components/SearchForm/SearchForm";
 import css from './MoviesPage.module.css';
@@ -40,11 +40,32 @@ const MoviesPage = () => {
         setMovies([]);
     }
 
+    const SearchResults = () => {
+        return (
+            <ul>
+                {movies.map(movie => {
+                    return (
+                        <li key={movie.id} className={css.movie}>
+                            <Link to={`/movies/${movie.id}`}
+                                state={{ from: location }}>
+                                {movie.title} |&nbsp;  
+                                {movie.release_date?.split('-')[0] || 'No data'}
+                                </Link>
+                        </li>
+                    )
+                })}
+            </ul>
+        )
+    }
+
+    const isMovies = Boolean(movies.length);
+
     return (
         <main>
             <SearchForm onSubmit={onSearch} />
             {isLoading && <Loader />}
             {error && Notify.failure('Please try again later!')}
+            {isMovies && SearchResults()}
         </main>
      
     )

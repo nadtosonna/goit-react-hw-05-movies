@@ -11,7 +11,7 @@ export function App() {
     <Routes>
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<Home />} />
-          <Route path="movies" element={<Movies />}></Route>
+        <Route path="movies" element={<Movies />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

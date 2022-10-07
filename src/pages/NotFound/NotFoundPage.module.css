@@ -1,0 +1,16 @@
+.container {
+    padding: 30px;
+    max-width: 1280px;
+    text-align: center;
+    background-color: rgb(241, 233, 233);
+    border-radius: 20px;
+}
+.title {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.link {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}

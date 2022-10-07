@@ -8,6 +8,7 @@
     overflow: hidden;
     border: 1px solid black;
     border-radius: 4px;
+    margin-bottom: 24px;
 }
 .form::placeholder {
     font: inherit;

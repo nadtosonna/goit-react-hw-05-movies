@@ -1,0 +1,7 @@
+.movie {
+    font-weight: 600;
+}
+
+.movie:not(:last-child) {
+    margin-bottom: 8px;
+}
