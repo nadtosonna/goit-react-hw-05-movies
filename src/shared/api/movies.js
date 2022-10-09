@@ -30,7 +30,7 @@ export async function fetchMovies(query, page) {
 export async function fetchMoviesByID(id) {
   try {
     const { data } = await axios.get(
-      `${MOVIE_ID_URL}${id}?api_key=${API_KEY}&language=en-US&append_to_response=videos`
+      `${MOVIE_ID_URL}${id}?api_key=${API_KEY}&language=en-US`
     );
         return data;
   } catch (error) {
@@ -52,7 +52,7 @@ export async function fetchTrailer(id) {
 export async function fetchReviews(id) {
     try {
     const { data } = await axios.get(
-      `${MOVIE_ID_URL}${id}/review?api_key=${API_KEY}&language=en-US`
+      `${MOVIE_ID_URL}${id}/reviews?api_key=${API_KEY}&language=en-US`
         );
         return data;
     } catch (error) {
@@ -63,7 +63,7 @@ export async function fetchReviews(id) {
 export async function fetchCast(id) {
     try {
     const { data } = await axios.get(
-      `${MOVIE_ID_URL}${id}/credit?api_key=${API_KEY}&language=en-US`
+      `${MOVIE_ID_URL}${id}/credits?api_key=${API_KEY}&language=en-US`
         );
         return data;
     } catch (error) {

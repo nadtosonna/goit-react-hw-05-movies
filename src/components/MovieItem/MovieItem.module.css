@@ -1,0 +1,80 @@
+.movie {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.imgBlock {
+    margin-right: 30px;
+    min-width: 480px;
+    box-shadow: 1px 1px 20px 1px black;
+}
+
+.titleBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    margin-right: 30px;
+}
+
+.rating {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: rgb(87, 123, 190);
+    color: white;
+    border-radius: 4px;
+}
+
+.overviewTitle,
+.genresTitle {
+    margin-bottom: 15px;
+}
+
+.genres {
+    display: flex;
+    flex-direction: column;
+    max-width: 140px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    margin-right: 10px;
+    color: rgb(87, 123, 190);
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 4px 8px 4px 8px;
+    box-shadow: 1px 1px 10px black;
+}
+
+.overview {
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.additional {
+    margin-top: 26px;
+    margin-left: 20px;
+}
+
+.additionalTitle {
+    margin-bottom: 15px;
+}
+
+.cast,
+.reviews {
+    font-size: 22px;
+    font-weight: 700;
+    color: rgb(87, 123, 190);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.descriptionBlock {
+    margin-top: 10px;
+}

@@ -1,0 +1,12 @@
+.section {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.castList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1.25rem;
+}
+.castCard {
+    box-shadow: 1px 1px 10px black;
+}
