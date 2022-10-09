@@ -4,6 +4,7 @@ import { useLocation, useSearchParams, Link } from "react-router-dom";
 import { Loader } from "shared/Loader/Loader";
 import SearchForm from "components/SearchForm/SearchForm";
 import { Notify } from 'notiflix';
+import css from './MoviesPage.module.css';
 
 const MoviesPage = () => {
     const [movies, setMovies] = useState([]);
@@ -45,7 +46,7 @@ const MoviesPage = () => {
             <ul>
                 {movies.map(movie => {
                     return (
-                        <li key={movie.id}>
+                        <li key={movie.id} className={css.movie}>
                             <Link to={`/movies/${movie.id}`}
                                 state={{ from: location }}>
                                 {movie.title} |&nbsp;  
