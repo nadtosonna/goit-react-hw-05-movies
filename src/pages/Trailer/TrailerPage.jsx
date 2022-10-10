@@ -20,9 +20,10 @@ const Trailer = () => {
 		}
     }
     const renderTrailer = () => {
-        const officialTrailer = trailer.videos.results.find(item => item.name.includes('Official Trailer' || 'Teaser'));
+        const officialTrailer = trailer.videos.results.find(item =>
+            item.name.includes('Official Trailer') || item.name.includes('Teaser'));
 
-        return (
+         return (
             <YouTube videoId={officialTrailer.key} opts={opts} />
         )
     }
