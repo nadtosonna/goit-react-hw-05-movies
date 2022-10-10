@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import { BsCameraReels } from "react-icons/bs";
 import css from "./SharedLayout.module.css";
 import { Link } from "./SharedLayout.styled";
+import { Loader } from "shared/Loader/Loader";
 
 const SharedLayout = () => {
   return (
@@ -20,7 +21,7 @@ const SharedLayout = () => {
           <Link to="/movies">Movies</Link>
         </nav>
         </header>
-      <Suspense fallback={<div>Loading page...</div>}>
+      <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>
     </div>

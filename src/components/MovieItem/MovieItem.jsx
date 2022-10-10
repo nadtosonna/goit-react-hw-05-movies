@@ -15,7 +15,7 @@ const MovieItem = ({ movie: { title, overview, genres, poster_path, vote_average
             <BackLink to={backLinkHref}>Back to Movies</BackLink>
             <div className={css.movie}>
                 <div className={css.imgBlock}>
-                    <img src={`https://www.themoviedb.org/t/p/w500${poster_path}`} alt={title} className={css.image} />
+                    <img src={poster_path ? `https://www.themoviedb.org/t/p/w500${poster_path}` : 'https://ik.imagekit.io/tc8jxffbcvf/default-movie-portrait_EmJUj9Tda5wa.jpg?tr=fo-auto,di-'} alt={title} className={css.image} />
                 </div>
                 <div className={css.descriptionBlock}>
                     <div className={css.titleBlock}>
