@@ -22,8 +22,10 @@ const Trailer = () => {
     const renderTrailer = () => {
         const officialTrailer = trailer.videos.results.find(item =>
             item.name.includes('Official Trailer') || item.name.includes('Teaser') || item.name.includes('Trailer'));
-
-         return (
+            
+        if (!officialTrailer) {
+            return <p className={css.note}>No trailer was found for this movie.</p>;
+        } else return (
             <YouTube videoId={officialTrailer.key} opts={opts} />
         )
     }
