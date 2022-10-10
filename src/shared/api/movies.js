@@ -32,7 +32,6 @@ export async function fetchMoviesByID(id) {
     const { data } = await axios.get(
       `${MOVIE_ID_URL}${id}?api_key=${API_KEY}&language=en-US&append_to_response=videos`
     );
-    console.log(data);
         return data;
   } catch (error) {
     console.log(error);

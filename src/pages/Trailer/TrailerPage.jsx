@@ -20,7 +20,7 @@ const Trailer = () => {
 		}
     }
     const renderTrailer = () => {
-        const officialTrailer = trailer.videos.results.find(item => item.name === 'Official Trailer');
+        const officialTrailer = trailer.videos.results.find(item => item.name === 'Official Trailer' || item.name === 'Trailer');
 
         return (
             <YouTube videoId={officialTrailer.key} opts={opts} />
@@ -28,8 +28,8 @@ const Trailer = () => {
     }
 
     return (
-        <section>
-            {trailer.length > 0 ? renderTrailer() : <p className={css.note}>No trailer was found for this movie.</p>}
+        <section className={css.section}>
+            {trailer.videos ? renderTrailer() : <p className={css.note}>No trailer was found for this movie.</p>}
         </section>
     )
 }
