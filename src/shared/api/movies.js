@@ -30,19 +30,9 @@ export async function fetchMovies(query, page) {
 export async function fetchMoviesByID(id) {
   try {
     const { data } = await axios.get(
-      `${MOVIE_ID_URL}${id}?api_key=${API_KEY}&language=en-US`
+      `${MOVIE_ID_URL}${id}?api_key=${API_KEY}&language=en-US&append_to_response=videos`
     );
-        return data;
-  } catch (error) {
-    console.log(error);
-  }
-}
-
-export async function fetchTrailer(id) {
-  try {
-    const { data } = await axios.get(
-      `${MOVIE_ID_URL}${id}/videos?api_key=${API_KEY}&language=en-US`
-    );
+    console.log(data);
         return data;
   } catch (error) {
     console.log(error);

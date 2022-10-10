@@ -1,0 +1,7 @@
+.note {
+    font-size: 22px;
+    font-weight: 600;
+    box-shadow: 1px 1px 10px black;
+    border-radius: 4px;
+    padding: 15px;
+}

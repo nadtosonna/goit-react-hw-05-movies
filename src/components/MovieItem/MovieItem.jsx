@@ -1,6 +1,7 @@
 import { useLocation, Outlet, Link } from "react-router-dom";
 import { BackLink } from "components/BackLink/BackLink";
 import { Suspense } from "react";
+import { Loader } from "shared/Loader/Loader";
 import css from './MovieItem.module.css';
 
 const MovieItem = ({ movie: { title, overview, genres, poster_path, vote_average, release_date }}) => {
@@ -33,8 +34,9 @@ const MovieItem = ({ movie: { title, overview, genres, poster_path, vote_average
                 <h2 className={css.additionalTitle}>Additional information:</h2>
                 <div className={css.cast}><Link to="cast" state={{ from: backLinkHref }}>Cast</Link></div>
                 <div className={css.reviews}><Link to="reviews" state={{ from: backLinkHref }}>Reviews</Link></div>
+                <div className={css.trailer}><Link to="trailer" state={{ from: backLinkHref }}>Trailer</Link></div>
                 <div>
-                    <Suspense fallback={<div>Loading...</div>}>
+                    <Suspense fallback={<Loader />}>
                         <Outlet />
                     </Suspense>
                 </div>

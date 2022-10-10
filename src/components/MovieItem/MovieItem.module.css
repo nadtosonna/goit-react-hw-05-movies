@@ -7,7 +7,7 @@
 
 .imgBlock {
     margin-right: 30px;
-    min-width: 480px;
+    min-width: 360px;
     box-shadow: 1px 1px 20px 1px black;
 }
 
@@ -68,7 +68,8 @@
 }
 
 .cast,
-.reviews {
+.reviews,
+.trailer {
     font-size: 22px;
     font-weight: 700;
     color: rgb(87, 123, 190);
